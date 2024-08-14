@@ -25,8 +25,9 @@
       margin-bottom: 0;
     }
     &__pic {
+      --scale-factor: 0.5;
+      overflow: hidden;
       max-width: 700px;
-      overflow: visible;
       margin: 0;
       a {
         display: block;
@@ -47,6 +48,11 @@
         width: 100%;
         max-width:100%;
         vertical-align: bottom;
+      }
+      iframe {
+        transform: scale(var(--scale-factor));
+        width: calc(1/var(--scale-factor) * 100%);
+        height: calc(1/var(--scale-factor) * 100%);
       }
     }
     &__caption {
